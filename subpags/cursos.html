@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalPró | Portal de Cursos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Digital<span>Pró</span></div>
+            <nav>
+                <a href="../index.html">Início</a>
+                <a href="cursos.html" class="active">Cursos</a>
+                <a href="ajuda.html" class="btn-ajuda">Preciso de Ajuda</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cabeçalho da Página de Cursos -->
+    <section class="cursos-header">
+        <div class="container">
+            <h1>Sua Biblioteca de Conhecimento</h1>
+            <p>Aulas passo a passo, pensadas para quem está começando do zero.</p>
+
+            <div class="busca-box">
+                <input type="text" id="inputBusca" placeholder="O que você quer aprender hoje?">
+                <button id="btnBusca">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container page-content">
+
+        <!-- Filtros de Navegação -->
+        <div class="filtros">
+            <button class="filter-btn active">Todos os Cursos</button>
+            <button class="filter-btn">Fundamentos</button>
+            <button class="filter-btn">Internet</button>
+            <button class="filter-btn">Escritório</button>
+            <button class="filter-btn">Programação</button>
+            <button class="filter-btn">Design</button>
+        </div>
+
+        <!-- Módulo 1 -->
+        <div class="secao-container" data-section="fundamentos">
+            <div class="secao-titulo">
+                <h2>Módulo 1: Fundamentos Gratuitos</h2>
+                <p>A base necessária para quem está começando do absoluto zero.</p>
+                <div class="linha"></div>
+            </div>
+            <div class="grid-cursos">
+                <article class="card" data-category="fundamentos">
+                    <div class="card-thumb t-blue"><span>💻</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-nivel">Iniciante</span><span class="duracao">⏱
+                                20h</span></div>
+                        <h3>Hardware v2.0</h3>
+                        <p>Entenda o que tem "debaixo do capô" do seu computador. Aprenda sobre peças, montagem e como
+                            escolher o melhor setup para suas necessidades.</p>
+                        <div class="card-footer"><a target="_blank" href="https://www.cursoemvideo.com/curso/hardware/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="fundamentos">
+                    <div class="card-thumb t-purple"><span>🐧</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-nivel">Iniciante</span><span class="duracao">⏱
+                                15h</span></div>
+                        <h3>Linux</h3>
+                        <p>Descubra o sistema operacional livre e poderoso. Aprenda a gerenciar pastas, arquivos e
+                            entenda por que ele é a base de grande parte da internet.</p>
+                        <div class="card-footer"><a target="_blank" href="https://www.cursoemvideo.com/curso/linux/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="fundamentos">
+                    <div class="card-thumb t-gold"><span>🧠</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-nivel">Iniciante</span><span class="duracao">⏱
+                                25h</span></div>
+                        <h3>Lógica de Programação</h3>
+                        <p>O primeiro passo para o mundo da tecnologia. Treine seu raciocínio lógico para resolver
+                            problemas e entender a linguagem das máquinas.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/curso-de-algoritmo/" class="btn-play">Assistir
+                                Agora</a></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="secao-container" data-section="internet">
+            <div class="secao-titulo" style="margin-top: 60px;">
+                <h2>Módulo 2: Internet e Redes Sociais</h2>
+                <p>Navegue com confiança e conecte-se com o mundo.</p>
+                <div class="linha"></div>
+            </div>
+            <div class="grid-cursos">
+                <article class="card" data-category="internet">
+                    <div class="card-thumb t-red"><span>🛡️</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-seguranca">Essencial</span><span class="duracao">⏱
+                                10h</span></div>
+                        <h3>Segurança Digital</h3>
+                        <p>Sua segurança em primeiro lugar. Aprenda a criar senhas fortes, identificar golpes por e-mail
+                            e navegar com total tranquilidade.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/seguranca-da-informacao-modulo-00/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="internet">
+                    <div class="card-thumb t-green"><span>📱</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-mobile">Social</span><span class="duracao">⏱
+                                12h</span></div>
+                        <h3>Marketing Digital</h3>
+                        <p>Aprenda a divulgar ideias ou produtos na internet. Entenda como atrair público e usar as
+                            ferramentas digitais para crescer de forma profissional.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/marketing-digital/" class="btn-play">Assistir
+                                Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="internet">
+                    <div class="card-thumb t-cyan"><span>🌐</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-nivel">Intermediário</span><span class="duracao">⏱
+                                20h</span></div>
+                        <h3>WordPress</h3>
+                        <p>Crie seu próprio site ou blog de forma simples e rápida. Aprenda a usar a plataforma mais
+                            popular do mundo sem precisar escrever código.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/wordpress-2019-profissional-com-gutenberg/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div class="secao-container" data-section="escritório">
+            <div class="secao-titulo" style="margin-top: 60px;">
+                <h2>Módulo 3: Pacote Office para o Dia a Dia</h2>
+                <p>Ferramentas essenciais para organização pessoal e profissional.</p>
+                <div class="linha"></div>
+            </div>
+            <div class="grid-cursos">
+                <article class="card" data-category="escritório">
+                    <div class="card-thumb t-green-dark"><span>📊</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-gov">Escritório</span><span class="duracao">⏱
+                                30h</span></div>
+                        <h3>Excel</h3>
+                        <p>Domine as planilhas para organizar sua vida financeira ou profissional. Aprenda fórmulas e
+                            gráficos que facilitam a gestão de dados.</p>
+                        <div class="card-footer"><a target="_blank" href="https://www.cursoemvideo.com/curso/excell/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="escritório">
+                    <div class="card-thumb t-blue"><span>📄</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-gov">Escritório</span><span class="duracao">⏱
+                                15h</span></div>
+                        <h3>Word</h3>
+                        <p>Escreva com clareza e profissionalismo. Aprenda a formatar currículos, cartas e documentos
+                            importantes seguindo as normas corretas.</p>
+                        <div class="card-footer"><a target="_blank" href="https://www.cursoemvideo.com/curso/word/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="design">
+                    <div class="card-thumb t-blue-dark"><span>🖼️</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag tag-nivel">Criativo</span><span class="duracao">⏱
+                                20h</span></div>
+                        <h3>Edição de Fotos</h3>
+                        <p>Dê um toque profissional às suas lembranças. Aprenda a tratar cores, remover imperfeições e
+                            criar artes incríveis com ferramentas digitais.</p>
+                        <div class="card-footer"><a target="_blank" href="https://www.cursoemvideo.com/curso/photoshop/"
+                                class="btn-play">Assistir Agora</a></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Módulo 4 -->
+        <div class="secao-container" data-section="programação">
+            <div class="secao-titulo" style="margin-top: 60px;">
+                <h2>Módulo 4: Desafio - Quero ser Programador</h2>
+                <p>Para quem pegou o gosto pela tecnologia e quer ir além.</p>
+                <div class="linha"></div>
+            </div>
+            <div class="grid-cursos">
+                <article class="card" data-category="programação">
+                    <div class="card-thumb t-orange"><span>HTML</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag">Web</span><span class="duracao">⏱ 40h</span></div>
+                        <h3>HTML5 + CSS3</h3>
+                        <p>A base da internet moderna. Aprenda a estruturar e estilizar seus próprios sites, dando o
+                            primeiro passo na carreira de desenvolvedor.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/html5-css3-modulo1/" class="btn-play">Assistir
+                                Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="programação">
+                    <div class="card-thumb t-yellow"><span>JS</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag">Intermediário</span><span class="duracao">⏱ 35h</span>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>Deixe seus sites dinâmicos e interativos. Aprenda a criar elementos que reagem ao usuário,
+                            tornando a navegação muito mais rica.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/javascript/" class="btn-play">Assistir
+                                Agora</a></div>
+                    </div>
+                </article>
+                <article class="card" data-category="programação">
+                    <div class="card-thumb t-blue"><span>PY</span></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="tag">Iniciante</span><span class="duracao">⏱ 40h</span>
+                        </div>
+                        <h3>Python 3</h3>
+                        <p>Comece a programar com a linguagem mais amigável do mundo. Perfeita para quem busca
+                            simplicidade sem abrir mão de um poder incrível.</p>
+                        <div class="card-footer"><a target="_blank"
+                                href="https://www.cursoemvideo.com/curso/python-3-mundo-1/" class="btn-play">Assistir
+                                Agora</a></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>DigitalPró</strong> - Tecnologia para Todos</p>
+            <p>Projeto de Extensão Universitária | Desenvolvido por:</p>
+            <p><strong>João Pedro de Melo Chaves Silva (RU: 4335743)</strong></p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE BUSCA E FILTRO -->
+    <script>
+        const campoBusca        = document.getElementById('inputBusca');
+        const btnBusca          = document.getElementById('btnBusca');
+        const botoesFiltro      = document.querySelectorAll('.filter-btn');
+        const cards             = document.querySelectorAll('.card');
+        const containersSecao   = document.querySelectorAll('.secao-container');
+
+        function filtrar() {
+            const termoBusca    = campoBusca.value.toLowerCase();
+            const filtroAtivo   = document.querySelector('.filter-btn.active').textContent.toLowerCase();
+
+            cards.forEach(card => {
+                const titulo    = card.querySelector('h3').textContent.toLowerCase();
+                const descricao = card.querySelector('p').textContent.toLowerCase();
+                const categoria = card.getAttribute('data-category').toLowerCase();
+
+                // Lógica: Deve bater com o texto da busca E com a categoria do botão
+                const bateBusca     = titulo.includes(termoBusca) || descricao.includes(termoBusca);
+                const bateCategoria = (filtroAtivo === 'todos os cursos') || (categoria === filtroAtivo);
+
+                if (bateBusca && bateCategoria) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Esconde o título da seção se não houver nenhum curso visível nela
+            containersSecao.forEach(secao => {
+                const cardsVisiveis = secao.querySelectorAll('.card[style="display: block;"]');
+                const cardsSemStyle = secao.querySelectorAll('.card:not([style])'); // Trata o estado inicial
+
+                if (cardsVisiveis.length === 0 && cardsSemStyle.length === 0) {
+                    secao.style.display = 'none';
+                } else {
+                    secao.style.display = 'block';
+                }
+            });
+        }
+
+        // Eventos dos botões de filtro
+        botoesFiltro.forEach(botao => {
+            botao.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                botao.classList.add('active');
+                filtrar();
+            });
+        });
+
+        // Eventos de busca
+        btnBusca.addEventListener('click', filtrar);
+        campoBusca.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') filtrar();
+            if (campoBusca.value === "") filtrar();
+        });
+    </script>
+</body>
+
+</html>

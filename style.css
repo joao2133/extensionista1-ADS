@@ -1,0 +1,314 @@
+/* ==========================================
+   1. VARIÁVEIS E RESET
+   ========================================== */
+:root {
+    --primary: #2196f3;
+    --primary-dark: #1976d2;
+    --accent: #00bcd4;
+    --bg: #f8f9fa;
+    --text: #2c3e50;
+    --text-light: #546e7a;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --transition: 0.3s ease;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* ==========================================
+   2. COMPONENTES GLOBAIS (NAV & FOOTER)
+   ========================================== */
+.navbar { 
+    background: var(--white); 
+    height: 80px; 
+    display: flex; 
+    align-items: center; 
+    box-shadow: var(--shadow); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.navbar .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.logo { 
+    font-size: 1.8rem; 
+    font-weight: 800; 
+    color: var(--primary); 
+    cursor: default; 
+}
+
+.logo span { color: var(--accent); }
+
+nav a { 
+    text-decoration: none; 
+    color: var(--text); 
+    font-weight: 500; 
+    margin-left: 20px; 
+    transition: var(--transition); 
+}
+
+nav a:hover, nav a.active { color: var(--primary); }
+
+.footer { 
+    text-align: center; 
+    padding: 60px 0; 
+    background: #2c3e50; 
+    color: white; 
+    margin-top: 25px; 
+}
+
+.footer p { opacity: 0.8; margin-bottom: 5px; }
+
+/* ==========================================
+   3. BOTÕES E BOTÕES DE AÇÃO (CTAs)
+   ========================================== */
+.btn-ajuda { 
+    background: var(--primary); 
+    color: white !important; 
+    padding: 10px 22px; 
+    border-radius: 50px; 
+}
+
+.btn-ajuda:hover { background: var(--primary-dark); }
+
+.cta-principal { 
+    background: #ff9800; 
+    color: white; 
+    text-decoration: none; 
+    padding: 18px 35px; 
+    border-radius: 10px; 
+    font-weight: 800; 
+    font-size: 1.1rem; 
+    display: inline-block; 
+    transition: var(--transition); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+
+.cta-principal:hover { transform: scale(1.05); background: #f57c00; }
+
+.cta-secundario {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-play { 
+    text-decoration: none; 
+    color: var(--primary); 
+    font-weight: 800; 
+    transition: var(--transition);
+}
+
+.btn-play:hover { color: var(--primary-dark); }
+
+/* ==========================================
+   4. LANDING PAGE (INDEX.HTML)
+   ========================================== */
+.hero-lp { 
+    padding: 80px 0; 
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent)); 
+    color: white; 
+    border-radius: 0 0 50px 50px; 
+}
+
+.hero-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
+    gap: 40px; 
+}
+
+.hero-text h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px; }
+
+.badge-projeto {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero-btns { display: flex; gap: 20px; margin-top: 30px; }
+
+/* Ilustração Hero */
+.hero-img-box { position: relative; display: flex; justify-content: center; align-items: center; }
+
+.img-circulo {
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 10rem;
+}
+
+.floating-card {
+    position: absolute; background: white; color: var(--text);
+    padding: 15px 25px; border-radius: 15px; font-weight: 700;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: float 3s infinite ease-in-out;
+}
+.card-1 { top: 20%; left: 0; }
+.card-2 { bottom: 20%; right: 0; animation-delay: 1.5s; }
+
+/* Seções de Texto da LP */
+.para-quem, .conquistas, .depoimentos { padding: 80px 0; }
+
+.secao-titulo { margin-bottom: 40px; margin-top: 40px; text-align: center; }
+.linha { width: 60px; height: 5px; background: var(--accent); margin: 15px auto; border-radius: 10px; }
+
+.grid-quem { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.quem-item { background: white; padding: 25px; border-radius: 15px; border-bottom: 4px solid var(--accent); box-shadow: var(--shadow); }
+
+.conquistas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.lista-check { list-style: none; margin-top: 20px; }
+.lista-check li { margin-bottom: 15px; position: relative; padding-left: 35px; }
+.lista-check li::before { content: '✔️'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+.conquistas-stats { display: flex; gap: 20px; }
+.stat-box {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white; padding: 40px; border-radius: 20px; text-align: center; flex: 1;
+}
+
+.grid-depoimentos { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.depoimento-card { padding: 30px; border-radius: 20px; background: white; font-style: italic; box-shadow: var(--shadow); }
+.depoimento-card h4 { margin-top: 15px; font-style: normal; color: var(--primary); }
+
+.cta-final { padding: 100px 0; background: var(--text); color: white; text-align: center; }
+
+/* ==========================================
+   5. PÁGINA DE CURSOS (CURSOS.HTML)
+   ========================================== */
+.cursos-header { background: var(--text); color: white; padding: 60px 0; text-align: center; }
+
+.busca-box {
+    margin: 30px auto 0; max-width: 600px;
+    display: flex; background: white; padding: 5px; border-radius: 50px;
+}
+.busca-box input { flex: 1; border: none; padding: 12px 20px; border-radius: 50px; outline: none; font-size: 1rem; }
+.busca-box button { background: var(--primary); color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: 600; cursor: pointer; }
+
+.filtros { display: flex; justify-content: center; gap: 15px; margin: 50px 0px; flex-wrap: wrap; }
+
+.filter-btn {
+    background: white; border: 2px solid var(--primary); color: var(--primary);
+    padding: 8px 20px; border-radius: 50px; font-weight: 600; cursor: pointer;
+    box-shadow: var(--shadow); transition: var(--transition);
+}
+.filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; }
+
+/* Cards de Cursos */
+.grid-cursos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+.card:hover { transform: translateY(-10px); }
+
+.card-thumb { height: 160px; display: flex; align-items: center; justify-content: center; }
+.card-thumb span { font-size: 3.5rem; font-weight: 800; color: white; }
+
+.card-body { padding: 25px; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.duracao { font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
+
+.card-body h3 { margin-bottom: 10px; color: var(--primary-dark); font-size: 1.25rem; }
+.card-body p { color: var(--text-light); font-size: 0.95rem; }
+
+.card-footer { 
+    display: flex; justify-content: space-between; align-items: center; 
+    margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; 
+}
+
+/* ==========================================
+   6. PÁGINA DE AJUDA / FAQ (AJUDA.HTML)
+   ========================================== */
+.faq-elaborado { max-width: 900px; margin: 0 auto; }
+
+.faq-item {
+    background: var(--white); padding: 30px; border-radius: 20px;
+    margin-bottom: 25px; box-shadow: var(--shadow);
+    border-left: 6px solid var(--accent); transition: var(--transition);
+}
+.faq-item:hover { transform: translateX(10px); }
+
+.faq-pergunta { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.faq-pergunta span { font-size: 2rem; }
+.faq-pergunta h3 { font-size: 1.3rem; color: var(--primary-dark); }
+
+.faq-resposta p {
+    font-size: 1.05rem; color: var(--text); border-top: 1px solid #eee; padding-top: 15px;
+}
+
+/* ==========================================
+   7. UTILITÁRIOS (TAGS E GRADIENTES)
+   ========================================== */
+.tag { padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.tag-nivel { background: #e3f2fd; color: #1976d2; }
+.tag-seguranca { background: #ffebee; color: #c62828; }
+.tag-mobile { background: #f1f8e9; color: #33691e; }
+.tag-gov { background: #fff3e0; color: #ef6c00; }
+
+/* Gradientes de Categoria */
+.t-blue { background: linear-gradient(135deg, #2196f3, #64b5f6); }
+.t-purple { background: linear-gradient(135deg, #673ab7, #9575cd); }
+.t-gold { background: linear-gradient(135deg, #ffd700, #ffecb3); color: #856404 !important; }
+.t-red { background: linear-gradient(135deg, #f44336, #ef9a9a); }
+.t-green { background: linear-gradient(135deg, #4caf50, #81c784); }
+.t-green-dark { background: linear-gradient(135deg, #1b5e20, #4caf50); }
+.t-cyan { background: linear-gradient(135deg, #00bcd4, #80deea); }
+.t-blue-dark { background: linear-gradient(135deg, #0d47a1, #2196f3); }
+.t-orange { background: linear-gradient(135deg, #ff9800, #ffb74d); }
+.t-yellow { background: linear-gradient(135deg, #ffeb3b, #fff176); }
+.t-yellow span { color: #333 !important; }
+
+/* ==========================================
+   8. ANIMAÇÕES E RESPONSIVIDADE
+   ========================================== */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 992px) {
+    .hero-grid, .conquistas-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-btns { justify-content: center; }
+    .conquistas-stats { flex-direction: column; }
+    .hero-text h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    nav { display: none; } /* Idealmente aqui você teria um menu hambúrguer */
+    .grid-depoimentos { grid-template-columns: 1fr; }
+    .hero-img-box { margin-top: 40px; }
+    .stat-box { padding: 20px; }
+    .contato-extra { border-radius: 20px; }
+}
