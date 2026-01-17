@@ -3,7 +3,7 @@
 > **Projeto de Atividade Extensionista I**  
 > **Curso:** CST em Análise e Desenvolvimento de Sistemas  
 > **Instituição:** Centro Universitário Internacional UNINTER  
-> **Estudante:** João Pedro Silva (RU: 4335743)
+> **Estudante:** João Pedro de Melo Chaves Silva (RU: 4335743)
 
 ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
